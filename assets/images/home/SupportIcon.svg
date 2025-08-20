@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="SupportIcon" transform="translate(-1187 -958)">
+    <rect id="Rectangle_668" data-name="Rectangle 668" width="32" height="32" transform="translate(1187 958)" fill="none"/>
+    <g id="support_1" data-name="support 1" transform="translate(1183.275 954.275)" opacity="0.8">
+      <g id="Group" transform="translate(5 5)">
+        <path id="Vector" d="M25.24,4.33l-5.809,5.809Zm-5.809,15.1L25.24,25.24Zm-9.292-9.292L4.33,4.33Zm0,9.292L4.33,25.24ZM29.57,14.785A14.785,14.785,0,1,1,25.24,4.33,14.785,14.785,0,0,1,29.57,14.785Zm-8.214,0a6.571,6.571,0,1,1-1.925-4.647,6.571,6.571,0,0,1,1.925,4.647Z" transform="translate(0)" fill="none" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

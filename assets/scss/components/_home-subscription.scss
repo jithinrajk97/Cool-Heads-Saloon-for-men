@@ -1,0 +1,64 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.home-subscription {
+     @include min(1200) {
+          margin-top: size(180);
+          margin-bottom: size(80);
+     }
+     &_main {
+          background-color: #fafafa;
+          .wrap {
+               padding: 20px;
+               @include min(1200) {
+                    padding: size(42) size(200) size(27) size(200);
+               }
+          }
+          .img_man {
+               left: 20px;
+               bottom: 0;
+          }
+          .img_lady {
+               right: 50px;
+               bottom: 0;
+          }
+          .main-header__search {
+               padding-left: 0;
+               padding-right: 0;
+          }
+          .search-group .search-button {
+               flex: 0 0 105px;
+               width: 105px;
+               cursor: pointer;
+               &:hover {
+                    color: #000;
+               }
+          }
+     }
+     .content {
+          h5 {
+               @include min(992) {
+                    font-size: size(24);
+                    margin-bottom: 10px;
+               }
+               font-size: size(18);
+               font-weight: 600;
+               margin-bottom: 15px;
+               @include max(576) {
+                    max-width: 100% !important;
+               }
+          }
+          p {
+               color: #999999;
+               span {
+                    color: $primary-color;
+               }
+          }
+     }
+     .max80 {
+          @include min(1200) {
+               max-width: 56%;
+          }
+          max-width: 100%;
+     }
+}

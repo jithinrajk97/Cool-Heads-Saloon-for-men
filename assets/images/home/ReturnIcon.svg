@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.194" height="32.174" viewBox="0 0 32.194 32.174">
+  <g id="ReturnIcon" transform="translate(-677.903 -956.912)">
+    <rect id="Rectangle_667" data-name="Rectangle 667" width="32" height="32" transform="translate(678 957)" fill="none"/>
+    <g id="refresh_1" data-name="refresh 1" transform="translate(672.257 951.258)" opacity="0.8">
+      <g id="Group" transform="translate(6.667 6.663)">
+        <path id="Vector" d="M0,0V9.426H1.1ZM30.154,30.158V20.735H29.059Zm-1.095-9.423H20.731" transform="translate(0 0)" fill="none" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Vector-2" data-name="Vector" d="M30.063,13.2A15.1,15.1,0,0,0,1.085,9.427H9.422M29.083,20.735A15.105,15.105,0,0,1,.1,16.966" transform="translate(-0.006 0)" fill="none" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

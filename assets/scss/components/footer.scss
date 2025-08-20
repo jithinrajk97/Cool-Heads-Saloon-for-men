@@ -1,0 +1,174 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.footer {
+     &_item {
+          &.support {
+               @include max(567.98) {
+                    padding-top: size(24);
+                    h5 {
+                         margin-bottom: size(8);
+                    }
+               }
+          }
+          h5 {
+               font-size: size(14);
+
+               @include min(1200) {
+                    font-size: size(16);
+               }
+               font-weight: 600;
+               margin-bottom: size(20);
+               @include max(576.98) {
+                    margin-bottom: 8px;
+               }
+          }
+          ul {
+               li {
+                    margin-bottom: size(8);
+                    @include max(567.98) {
+                         margin-bottom: size(4);
+                    }
+
+                    a {
+                         @include lineHeight(16, 32);
+                         @include min(992) {
+                              font-size: size(16);
+                         }
+
+                         @include max(567.98) {
+                              font-size: 12px;
+                              line-height: 0.5;
+                         }
+                         font-size: size(14);
+                         font-weight: 400;
+                         &:hover {
+                              color: $primary-color;
+                         }
+                    }
+               }
+          }
+          &Email {
+               margin-bottom: size(24);
+               @include max(567.98) {
+                    margin-bottom: size(8);
+
+                    display: flex;
+                    gap: size(11);
+                    .title {
+                         font-size: size(14);
+                    }
+                    a {
+                         font-size: size(14);
+                    }
+               }
+               .title {
+                    margin-bottom: size(8);
+                    font-size: size(16);
+               }
+               a {
+                    color: #1c9bfd;
+                    &:hover {
+                         color: $primary-color;
+                    }
+               }
+          }
+          &Phone {
+               margin-bottom: size(24);
+               @include max(567.98) {
+                    margin-bottom: size(0);
+
+                    display: flex;
+                    gap: size(11);
+                    .title {
+                         font-size: size(14);
+                    }
+                    a {
+                         font-size: size(14);
+                    }
+               }
+               .title {
+                    margin-bottom: size(8);
+                    font-size: size(16);
+               }
+               a {
+                    color: #1c9bfd;
+                    &:hover {
+                         color: $primary-color;
+                    }
+               }
+          }
+     }
+     .address_title {
+          font-size: size(16);
+          margin-bottom: size(24);
+          @include max(991.98) {
+               font-size: size(14);
+               font-weight: 600;
+               margin-bottom: 1.5rem;
+          }
+     }
+     address {
+          @include lineHeight(16, 24);
+          @include min(992) {
+               max-width: 68%;
+          }
+          @include max(567) {
+               margin-bottom: 0;
+               padding-bottom: 24px;
+               border-bottom: 1px solid #28554b;
+               span {
+                    max-width: 50%;
+                    display: block;
+               }
+          }
+     }
+     &_bottom {
+          background-color: #05140f;
+          @include max(991.98) {
+               padding: size(16) 0 !important;
+          }
+          &_text {
+               @include max(991.98) {
+                    font-size: size(14);
+               }
+               p {
+                    @include max(991.98) {
+                         font-size: size(14);
+                    }
+
+                    @include max(576) {
+                         max-width: 70%;
+                         margin-left: auto;
+                         text-align: center;
+                    }
+               }
+
+               ul {
+                    li {
+                         img {
+                              @include max(576) {
+                                   max-width: 24px;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     &_wrapper {
+          padding: size(42) 0 size(15) 0;
+          @include min(568) {
+               padding: size(42) 0 size(30) 0;
+          }
+          @include min(992) {
+               padding: size(96) 0 size(91) 0;
+          }
+     }
+     .pt24 {
+          padding-top: 24px;
+          padding-bottom: 24px;
+     }
+     .border-bottom-1 {
+          border-bottom: 1px solid #28554b;
+     }
+}

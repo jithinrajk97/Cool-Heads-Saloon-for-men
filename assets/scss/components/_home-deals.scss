@@ -1,0 +1,73 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.home-deals {
+     padding: size(80) 0;
+     .swiper {
+          width: 100%;
+          height: 100%;
+     }
+
+     .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+     }
+
+     .swiper-pagination-bullets {
+          @include min(1200) {
+               display: none;
+          }
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          @include min(568) {
+               bottom: -40px;
+          }
+          @include min(1200) {
+               bottom: 60px;
+          }
+          @include min(1400) {
+               bottom: 80px;
+          }
+          bottom: -33px;
+          z-index: 1;
+          left: 50%;
+          transform: translate(-50%);
+          .swiper-pagination-bullet {
+               height: 18px;
+               width: 18px;
+               // border: 1px solid #999999;
+               background: #ccc;
+               display: block;
+               border-radius: 50%;
+               margin: 0 10px;
+               cursor: pointer;
+
+               &.swiper-pagination-bullet-active {
+                    position: relative;
+                    &:after {
+                         position: absolute;
+                         content: "";
+                         width: 18px;
+                         height: 18px;
+                         background-color: #000;
+                         top: 50%;
+                         left: 50%;
+                         transform: translate(-50%, -50%);
+                         border-radius: 50%;
+                    }
+               }
+          }
+     }
+}

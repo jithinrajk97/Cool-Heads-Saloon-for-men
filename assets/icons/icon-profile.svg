@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="SignInIcon" transform="translate(-1333 -88)">
+    <rect id="Rectangle_663" data-name="Rectangle 663" width="24" height="24" transform="translate(1333 88)" fill="none"/>
+    <g id="user" transform="translate(1335 90.189)">
+      <path id="Path_156" data-name="Path 156" d="M25.725,29.541V27.194A4.817,4.817,0,0,0,20.793,22.5H10.931A4.817,4.817,0,0,0,6,27.194v2.347" transform="translate(-6 -9.963)" fill="none" stroke="#1ba177" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_157" data-name="Path 157" d="M21.862,9.194a4.817,4.817,0,0,1-4.931,4.694A4.817,4.817,0,0,1,12,9.194,4.817,4.817,0,0,1,16.931,4.5a4.817,4.817,0,0,1,4.931,4.694Z" transform="translate(-7.069 -4.5)" fill="none" stroke="#1ba177" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,166 @@
+$variable-prefix: mf- !default;
+
+// colors
+$primary-color: #1ba177 !default;
+$secondary-color: #000000 !default;
+$black: #000000 !default;
+$dark: #022a1d !default;
+$white: #ffffff !default;
+$green: #24c96b !default;
+$orange: #fd9801 !default;
+$red: #fc5050 !default;
+$grey-100: #f3f5f7 !default;
+$yellow-500: #fff9d9 !default;
+$grey-200: #fafafa !default;
+$text-color: var(--text-color) !default;
+$text-color-alt: var(--text-color-alt) !default;
+$border-color: var(--border-color) !default;
+
+// Fonts
+$primary-font: var(--#{$variable-prefix}primary-font-family);
+$font-size-root: 16px !default;
+$base-size: 16;
+
+// Font Weight
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+$font-weights: (
+    "light": $font-light,
+    "regular": $font-regular,
+    "medium": $font-medium,
+    "semibold": $font-semibold,
+    "bold": $font-bold
+);
+
+//opacity
+$utilities: (
+    "opacity": (
+        property: opacity,
+        values: (
+            0: 0,
+            25: 0.25,
+            50: 0.5,
+            75: 0.75,
+            100: 1
+        )
+    )
+);
+
+$utilities: (
+    "visibility": (
+        property: visibility,
+        class: null,
+        values: (
+            visible: visible,
+            invisible: hidden
+        )
+    )
+);
+
+// breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1420px
+);
+
+$container-max-widths: (
+    sm: 576px,
+    md: 820px,
+    lg: 960px,
+    xl: 1200px,
+    xxl: 1320px
+);
+
+// bootstrap reset variables
+$primary: $primary-color !default;
+$secondary: $secondary-color !default;
+$success: $green !default;
+$danger: $red !default;
+$warning: $orange !default;
+$headings-font-weight: $font-medium !default;
+
+$btn-padding-y: 15px !default;
+$btn-padding-x: 20px !default;
+$btn-font-size: 16px !default;
+$btn-font-weight: $font-semibold !default;
+$btn-line-height: 1 !default;
+$btn-border-radius: 50rem !default;
+
+$modal-backdrop-bg: #00000099 !default;
+
+$enable-caret: false !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-reduced-motion: true !default;
+$enable-smooth-scroll: true !default;
+$enable-grid-classes: true !default;
+$enable-container-classes: true !default;
+$enable-cssgrid: false !default;
+$enable-button-pointers: true !default;
+$enable-rfs: true !default;
+$enable-validation-icons: false !default;
+$enable-negative-margins: false !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities: true !default;
+
+// headings
+$h-sizes: (
+    1: (
+        null: 36,
+        992: 48
+    ),
+    2: (
+        null: 26,
+        992: 32
+    ),
+    3: (
+        null: 30
+    ),
+    4: (
+        null: 28
+    ),
+    5: (
+        null: 24
+    ),
+    6: (
+        null: 20
+    )
+);
+
+// paragraphs
+$p-sizes: (
+    12: (
+        null: 12
+    ),
+    13: (
+        null: 13
+    ),
+    14: (
+        null: 14
+    ),
+    15: (
+        null: 15
+    ),
+    16: (
+        null: 16
+    ),
+    18: (
+        null: 18
+    ),
+);
+
+// stacking context
+$z-backdrop: 1048;
+$z-offcanvas: 1049;
+$z-header: 1050;
+$z-background: -1;
