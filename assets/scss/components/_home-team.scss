@@ -1,0 +1,71 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.home-team {
+
+     position: relative;
+
+     @include min(1200) {
+          &:before {
+               content: "";
+               position: absolute;
+               bottom: 0%;
+               left: 0;
+               width: 100%;
+               height: 53%;
+               background-color: #F8F7F1;
+               z-index: -1;
+          }
+     }
+
+     @include min(568) {
+          padding: size(48) 0;
+     }
+
+     @include min(992) {
+          padding: size(80) 0 size(80) 0;
+     }
+
+     padding: size(40) 0 size(25) 0;
+
+     &__line {
+          @include min(992) {
+               margin-top: size(30);
+          }
+         .line-img{
+          max-width: 70%;
+          margin-top: size(18);
+         }
+     }
+
+     &__title {
+          @include min(568) {
+               font-size: size(24);
+               margin-bottom: size(24);
+          }
+
+          @include min(992) {
+               font-size: size(60);
+               margin-bottom: size(28);
+          }
+
+          font-size: size(18);
+          margin-bottom: size(16);
+     }
+
+     &__description {
+
+          @include min(992) {
+               max-width: 80%;
+               font-size: size(16);
+               line-height: 1.8;
+          }
+
+          font-size: size(16);
+          margin: 0 auto;
+     }
+
+     .row {
+          --mf-gutter-y: 24px;
+     }
+}

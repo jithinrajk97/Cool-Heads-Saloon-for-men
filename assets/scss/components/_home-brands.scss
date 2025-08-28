@@ -1,288 +1,119 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-.brands {
-     @include min(992) {
-          padding: size(80) 0 size(0) 0;
+.home-careers {
+
+     position: relative;
+
+     @include min(568) {
+          padding: size(48) 0;
      }
-     padding: size(48) 0;
+
+     @include min(992) {
+          padding: size(80) 0 size(80) 0;
+     }
+
+     padding: size(40) 0 size(25) 0;
+
+   
+
      &__title {
           @include min(568) {
                font-size: size(24);
-               margin-bottom: size(32);
+               margin-bottom: size(24);
           }
+
           @include min(992) {
-               font-size: size(32);
-               margin-bottom: size(40);
+               font-size: size(60);
+               margin-bottom: size(28);
           }
+
           font-size: size(18);
           margin-bottom: size(16);
      }
 
-     .parent {
-          display: grid;
-          grid-column-gap: 25px;
-          grid-row-gap: 25px;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(4, 1fr);
-          @include min(1200) {
-               grid-template-columns: repeat(4, 1fr);
-               grid-template-rows: repeat(2, 1fr);
-          }
-     }
+     &__description {
 
-     .div1 {
-          grid-area: 1 / 1 / span 2 / span 2;
-          @include min(1200) {
-               grid-area: 1 / 1 / 3 / 3;
-          }
-     }
-     .div2 {
-          grid-area: 3 / 1 / span 1 / span 1;
-          @include min(1200) {
-               grid-area: 1 / 3 / 2 / 4;
-          }
-     }
-     .div3 {
-          grid-area: 3 / 2 / span 1 / span 1;
-          @include min(1200) {
-               grid-area: 1 / 4 / 2 / 5;
-          }
-     }
-     .div4 {
-          grid-area: 4 / 1 / span 1 / span 2;
-          @include min(1200) {
-               grid-area: 2 / 3 / 3 / 5;
-          }
-     }
-
-     .div1,
-     .div2,
-     .div3,
-     .div4 {
-          > * {
-               height: 100%;
-          }
-          figure {
-               margin-bottom: 0;
-          }
-     }
-     .div2,
-     .div3 {
-          figure {
-               margin-top: -4.5px;
-          }
-     }
-
-     .card {
-          width: 100%;
-          height: 100%;
-          // max-height: 568px;
-          background-image: url(../../images/home/brands/brand.png);
-          background-size: cover;
           @include min(992) {
-               padding-right: size(75);
+               max-width: 80%;
+               font-size: size(16);
+               line-height: 1.8;
           }
-          padding-right: size(18);
-          &_bg {
-               max-width: size(122);
 
-               @include min(992) {
-                    max-width: size(282);
-               }
-               figure {
-                    @include aspectRatio(235, 88);
-                    @include max(991.98) {
-                         margin-bottom: 12px !important;
-                    }
-               }
-               &Title {
-                    font-size: 1rem;
-                    font-size: size(12);
-
-                    @include min(992) {
-                         margin: size(24) 0;
-                         font-size: size(32);
-                    }
-               }
-          }
+          font-size: size(16);
+          margin: 0 auto;
      }
-     &_offers {
-          &_first {
-               background-color: $yellow-500;
-               padding: size(8) size(16) size(8) size(16);
-               @include min(992) {
-                    padding: size(30) size(30) size(30) size(30);
-               }
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               &_icon {
-                    @include min(767) {
-                         max-width: 90px;
-                    }
-                    max-width: 40px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    figure {
-                         // @include aspectRatio(90, 48);
-                         img {
-                              mix-blend-mode: darken;
-                         }
-                    }
-               }
-               &_product {
-                    max-width: 80%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    figure {
-                         // @include aspectRatio(200, 128);
-                         img {
-                              object-fit: cover;
-                         }
-                    }
-               }
-               span {
-                    @include min(767) {
-                         font-size: 12px;
-                    }
-                    font-size: 6px;
-                    text-align: center;
-                    display: block;
-                    margin-bottom: size(8);
-               }
 
-               &_off {
-                    @include max(567) {
-                         font-size: 0.75rem;
-                    }
-                    font-size: size(24);
-                    font-weight: 600;
-                    @include lineHeight(24, 35);
-               }
-          }
-
-          &_second {
-               background-color: #fce6d6;
-               padding: size(30) size(40) size(30) size(40);
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               &_icon {
-                    @include min(992) {
-                         max-width: 90px;
-                    }
-                    max-width: 50px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    figure {
-                         // @include aspectRatio(90, 48);
-                         img {
-                              mix-blend-mode: darken;
-                         }
-                    }
-               }
-               &_product {
-                    @include min(992) {
-                         max-width: 80%;
-                    }
-                    max-width: 90%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    figure {
-                         // @include aspectRatio(200, 128);
-                         img {
-                              object-fit: cover;
-                         }
-                    }
-               }
-               span {
-                    @include min(576) {
-                         font-size: 12px;
-                    }
-                    font-size: 6px;
-                    text-align: center;
-                    display: block;
-                    margin-bottom: size(8);
-               }
-
-               &_off {
-                    @include max(567) {
-                         font-size: 0.75rem;
-                    }
-                    font-size: size(24);
-                    font-weight: 600;
-                    @include lineHeight(24, 35);
-               }
-          }
-
-          &_third {
-               background-color: #c9e0e4;
-               padding: size(10) 7vw size(10) size(20);
-               display: flex;
-               align-items: center;
-               @include min(1200) {
-                    padding: size(10) 7vw size(10) size(20);
-               }
-               .img_wrap {
-                    max-width: 65%;
-                    width: 100%;
-                    @include min(768) {
-                         max-width: 50%;
-                    }
-                    @include min(1200) {
-                         max-width: 307px;
-                    }
-                    // figure {
-                    //      @include aspectRatio(393, 271);
-                    // }
-               }
-               .content {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    @include max(1199.98) {
-                         margin-left: 7vw;
-                    }
-                    @include max(767.98) {
-                         margin-left: 0;
-                    }
-                    figure {
-                         img {
-                              mix-blend-mode: darken;
-                         }
-                    }
-                    span {
-                         @include min(576) {
-                              font-size: 12px;
-                         }
-                         font-size: 6px;
-                         text-align: center;
-                         display: block;
-                         margin-bottom: size(8);
-                    }
-                    h5 {
-                         @include max(767.98) {
-                              font-size: size(12);
-                         }
-                    }
-                    .icon_wrap {
-                         @include max(767.98) {
-                              max-width: 4.625rem;
-                              margin-bottom: 12px;
-                         }
-                    }
-               }
-
-               &_off {
-                    @include min(767) {
-                         font-size: size(24);
-                    }
-
-                    font-size: size(12);
-                    font-weight: 600;
-                    @include lineHeight(24, 35);
-               }
-          }
+     .row {
+          --mf-gutter-y: 8px;
      }
+
+     // Job Cards Styles
+.job-card {
+     background: $white;
+     border: .6px solid var(--border-color);
+     border-radius: 12px;
+     padding: 24px;
+     margin-bottom: 24px;
+     transition: all 0.3s ease;
+     cursor: pointer;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     justify-content: space-between;
+     
+     &:hover {
+         border-color: $black;
+         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+         transform: translateY(-2px);
+
+         button{
+          opacity: 1;
+     }
+     
+     }
+     
+     &__content {
+         margin-bottom: 0px;
+     }
+     
+     &__title {
+         font-size: size(20);
+         font-weight: $font-bold;
+         color: $black;
+         margin-bottom: 12px;
+         line-height: 1.3;
+     }
+     
+     &__details {
+         display: flex;
+         align-items: center;
+         gap: 8px;
+         margin-bottom: 0px;
+     }
+     
+     &__location,
+     &__city {
+         font-size: size(14);
+         color: var(--mf-gray-600);
+         font-weight: $font-regular;
+     }
+     
+     &__separator {
+         color: var(--mf-gray-400);
+         font-size: size(12);
+     }
+     
+     &__action {
+         display: flex;
+         justify-content: flex-end;
+     }
+
+     button{
+          opacity: 0;
+     }
+     
+ }
+
+
 }

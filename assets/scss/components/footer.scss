@@ -2,6 +2,7 @@
 @import "../utils/mixins";
 
 .footer {
+     background-color: #FBFBFB !important;
      &_item {
           &.support {
                @include max(567.98) {
@@ -15,7 +16,7 @@
                font-size: size(14);
 
                @include min(1200) {
-                    font-size: size(16);
+                    font-size: size(24);
                }
                font-weight: 600;
                margin-bottom: size(20);
@@ -100,10 +101,10 @@
           }
      }
      .address_title {
-          font-size: size(16);
+          font-size: size(40);
           margin-bottom: size(24);
           @include max(991.98) {
-               font-size: size(14);
+               font-size: size(24);
                font-weight: 600;
                margin-bottom: 1.5rem;
           }
