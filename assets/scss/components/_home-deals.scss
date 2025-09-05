@@ -93,15 +93,23 @@
           @include min(992){
              padding-left: size(50);
           }
+
+          button{
+               @include max(991.98){
+                    margin:0 auto;
+               }
+          }
           &__title{
-               font-size: size(34);
+               font-size: size(28);
                margin-bottom: size(20);
                font-weight: 400;
                line-height: 1.5;
+               text-align: center;
                @include min(992){
                     font-size: size(54);
                     margin-top: size(120);
                     margin-bottom: size(30);
+                    text-align: start;
                }
           }
      }

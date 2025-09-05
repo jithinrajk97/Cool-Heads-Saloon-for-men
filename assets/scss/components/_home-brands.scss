@@ -55,6 +55,10 @@
      border-radius: 12px;
      padding: 24px;
      margin-bottom: 24px;
+     @include max(991.98){
+          padding: size(16) size(16);
+          margin-bottom: size(6);
+     }
      transition: all 0.3s ease;
      cursor: pointer;
      position: relative;

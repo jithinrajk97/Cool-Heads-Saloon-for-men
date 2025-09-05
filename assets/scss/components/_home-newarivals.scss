@@ -16,6 +16,7 @@
 
 	&__bg{
 		background-color: #FEF9F2;
+		padding: size(40) 0;
 		@include min(992) {
 			padding: size(45) 0;
 		}
@@ -109,6 +110,9 @@
 
 	.row {
 		 --mf-gutter-y: 8px;
+		 @include max(991.98){
+			--mf-gutter-y: 24px;
+		 }
 	}
 }
 

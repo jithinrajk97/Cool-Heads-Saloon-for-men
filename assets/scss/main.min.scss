@@ -461,7 +461,7 @@ ul {
 
 .select2-dropdown {
     min-width: 200px;
-    left: -35px !important;
+    left: 0 !important;
     transform: translateY(15px);
 }
 
@@ -508,5 +508,68 @@ ul {
         padding: size(48) 0;
     }
     padding: size(40) 0 size(40) 0;
+}
+
+// Badge Component Styles
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: size(12);
+    padding: size(12) size(20);
+    background-color: #fdf2f8;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: size(16);
+
+
+    &-text {
+        font-family: $primary-font;
+        font-size: size(14);
+        @include min(1200) {
+            font-size: size(15);
+        }
+        font-weight: $font-medium;
+        color: #374151;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    &-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-image {
+        width: size(24);
+        height: size(24);
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    // Badge Variant
+    &.badge-variant {
+        background-color: #f3e8ff;
+    }
+}
+
+// Responsive adjustments
+@include max(768) {
+    .badge {
+        padding: size(10) size(16);
+        gap: size(10);
+
+        &-text {
+            font-size: size(13);
+        }
+
+        &-image {
+            width: size(20);
+            height: size(20);
+        }
+    }
 }
 

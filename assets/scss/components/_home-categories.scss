@@ -38,6 +38,8 @@
          }
      }
 
+    
+
      &__title {
           @include min(568) {
                font-size: size(24);
@@ -90,6 +92,10 @@
           }
           h3{
                @include lineHeight(45, 64);
+
+               @include max(991.98){
+                    font-size: size(28);
+               }
           }
      }
 
@@ -102,9 +108,16 @@
 
      &__imgText {
           position: relative;
+        
+
+         
           @include min(992) {
                max-width: 238px;
                margin-left: auto
+          }
+          @include max(991.98){
+               max-width: 70%;
+               margin: 0 auto;
           }
           figure{
                @include aspectRatio(293, 293);
