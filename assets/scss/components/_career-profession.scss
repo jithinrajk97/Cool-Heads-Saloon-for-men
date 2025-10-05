@@ -1,0 +1,80 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.career-profession {
+    position: relative;
+
+    @include min(568) {
+        padding: size(48) 0;
+    }
+
+    @include min(992) {
+        padding: size(80) 0 size(80) 0;
+    }
+
+    padding: size(40) 0 size(25) 0;
+
+
+    &__title {
+        @include min(568) {
+            font-size: size(24);
+            margin-bottom: size(24);
+        }
+
+        @include min(992) {
+            font-size: size(60);
+            margin-bottom: size(28);
+        }
+
+        font-size: size(18);
+        margin-bottom: size(16);
+    }
+
+    &__description {
+        @include min(992) {
+            max-width: 80%;
+            font-size: size(16);
+            line-height: 1.8;
+        }
+
+        font-size: size(16);
+        margin: 0 auto;
+    }
+
+    .row {
+        --mf-gutter-y: 30px;
+    }
+
+  .card{
+    background-color: #F8f7f1;
+    @include min(992){
+       border-radius: 16px;
+    }
+
+    .circle-icon{
+      box-shadow: 0px 11px 29px 0px rgba(255, 210, 222, 0.54);
+    }
+
+    &-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    h5 {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 500;
+      @include min(992){
+        margin-top: 60px;
+        font-size: 20px;
+      }
+    }
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+
+}

@@ -1,0 +1,224 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.career-difference {
+    background-color: #FEF9F2;
+    position: relative;
+
+    @include min(568) {
+        padding: size(48) 0;
+    }
+
+    @include min(992) {
+        padding: size(80) 0 size(80) 0;
+    }
+
+    padding: size(40) 0 size(25) 0;
+
+    // CSS Grid Layout for Sticky Scroll
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: size(40);
+        
+        @include min(992) {
+            grid-template-columns: 1fr 1fr;
+            gap: size(60);
+            align-items: start;
+        }
+    }
+
+    // Left Side - Sticky Content
+    &__left {
+        @include min(992) {
+            position: sticky;
+            top: size(124); // lg:top-16 equivalent
+            height: fit-content;
+            z-index: 1;
+        }
+    }
+
+    &__sticky-content {
+        @include min(992) {
+            position: sticky;
+            top: size(124);
+            z-index: 2;
+        }
+    }
+
+    // Right Side - Scrollable Content
+    &__right {
+        @include min(992) {
+            // Content will scroll naturally
+        }
+    }
+
+    &__line {
+        @include min(992) {
+            margin-top: size(30);
+        }
+        .line-img{
+            max-width: 70%;
+            margin-top: size(18);
+        }
+    }
+
+    &__title {
+        @include min(568) {
+            font-size: size(24);
+            margin-bottom: size(24);
+        }
+
+        @include min(992) {
+            font-size: size(60);
+            margin-bottom: size(28);
+        }
+
+        font-size: size(18);
+        margin-bottom: size(16);
+    }
+
+    &__description {
+        @include min(992) {
+            max-width: 80%;
+            font-size: size(16);
+            line-height: 1.8;
+        }
+
+        font-size: size(16);
+        margin: 0 auto;
+    }
+
+    .row {
+        --mf-gutter-y: 30px;
+    }
+
+    .lock-img{
+        max-width: 70%;
+        @include aspectRatio(625, 553);
+    }
+
+  // Core Values Content
+  &__content {
+    padding-left: size(20);
+    
+    @include min(768) {
+      padding-left: size(30);
+    }
+    
+    @include min(992) {
+      padding-left: size(40);
+    }
+  }
+
+  .core-value-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: size(40);
+    position: relative;
+    
+    @include min(768) {
+      margin-bottom: size(50);
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .core-value-number {
+    font-size: size(24);
+    font-weight: 500;
+    color: #E0E0E0;
+    line-height: 1;
+    margin-bottom: size(20);
+    min-width: size(60);
+    
+    @include min(768) {
+      font-size: size(28);
+      margin-bottom: size(20);
+      min-width: size(80);
+    }
+    
+    @include min(992) {
+      font-size: size(32);
+      margin-bottom: size(20);
+      min-width: size(90);
+    }
+  }
+
+  .core-value-line {
+    width: 1px;
+    background-color: #E0E0E0;
+    margin-right: size(20);
+    align-self: stretch;
+    min-height: size(100);
+    
+    @include min(768) {
+      margin-right: size(30);
+      min-height: size(120);
+    }
+    
+    @include min(992) {
+      margin-right: size(40);
+      min-height: size(140);
+    }
+  }
+
+  .core-value-content {
+    flex: 1;
+    padding-top: size(8);
+  }
+
+  .core-value-title {
+    font-size: size(24);
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: size(12);
+    line-height: 1.2;
+    
+    @include min(768) {
+      font-size: size(28);
+      margin-bottom: size(10);
+    }
+    
+    @include min(992) {
+      font-size: size(40);
+      margin-bottom: size(10);
+    }
+  }
+
+  .core-value-intro {
+    font-size: size(16);
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: size(12);
+    line-height: 1.4;
+    
+    @include min(768) {
+      font-size: size(18);
+      margin-bottom: size(16);
+    }
+    
+    @include min(992) {
+      font-size: size(20);
+      margin-bottom: size(18);
+    }
+  }
+
+  .core-value-description {
+    font-size: size(14);
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 0;
+    
+    @include min(768) {
+      font-size: size(15);
+    }
+    
+    @include min(992) {
+      font-size: size(16);
+    }
+  }
+}

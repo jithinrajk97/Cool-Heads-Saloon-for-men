@@ -18,6 +18,12 @@
   }
 }
 @media screen and (max-width: 991.98px) {
+  .main-header {
+    position: fixed;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991.98px) {
   .main-header__logo {
     max-width: 77px;
   }
@@ -817,10 +823,10 @@ html.menu-open .hamburger span:last-child {
 }
 
 .location-selector .location-btn {
-  background-color: #f5f5dc;
-  border: none;
+  background-color: #FEF9F2;
+  border: 0.6px solid #D5BCBC;
   border-radius: 20px;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   font-size: 0.875rem;
   color: #333;
   cursor: pointer;

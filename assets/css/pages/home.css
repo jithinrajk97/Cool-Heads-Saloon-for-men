@@ -292,7 +292,7 @@
 
 .home-careers {
   position: relative;
-  padding: 2.5rem 0 1.5625rem 0;
+  padding: 3.125rem 0 1.5625rem 0;
 }
 @media screen and (min-width: 568px) {
   .home-careers {
@@ -411,7 +411,7 @@
 
 .home-categories {
   position: relative;
-  padding: 2.5rem 0 1.5625rem 0;
+  padding: 3.125rem 0 0rem 0;
 }
 @media screen and (min-width: 1200px) {
   .home-categories:before {
@@ -596,6 +596,21 @@
   .we-do__bg {
     padding: 2.8125rem 0;
   }
+}
+.we-do__bg--primary {
+  background-color: #FEF9F2;
+}
+.we-do__bg--secondary {
+  background-color: #F8F9FA;
+}
+.we-do__bg--accent {
+  background-color: #E3F2FD;
+}
+.we-do__bg--light {
+  background-color: #FFFFFF;
+}
+.we-do__bg--dark {
+  background-color: #F5F5F5;
 }
 .we-do__title {
   font-size: 1.125rem;
@@ -1956,7 +1971,7 @@
 
 .home-appointment {
   position: relative;
-  padding: 2.5rem 0 1.5625rem 0;
+  padding: 3.125rem 0 2.8125rem 0;
 }
 @media screen and (min-width: 568px) {
   .home-appointment {

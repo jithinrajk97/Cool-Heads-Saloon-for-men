@@ -13,6 +13,10 @@
             transform: translateY(0);
         }
     }
+    @include max(991.98) {
+        position: fixed;
+        width: 100%;
+    }
 
     top: 0;
     
@@ -708,10 +712,10 @@ html {
 
 .location-selector {
     .location-btn {
-        background-color: #f5f5dc;
-        border: none;
+        background-color: #FEF9F2;
+        border: .6px solid #D5BCBC;
         border-radius: 20px;
-        padding: size(8) size(16);
+        padding: size(12) size(16);
         font-size: size(14);
         color: #333;
         cursor: pointer;

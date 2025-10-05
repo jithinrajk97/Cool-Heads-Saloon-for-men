@@ -1,0 +1,376 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.about-appointment {
+     position: relative;
+
+
+     @include min(568) {
+          padding: size(48) 0;
+     }
+
+     @include min(992) {
+          padding: size(80) 0 size(80) 0;
+     }
+
+     padding: size(40) 0 size(25) 0;
+
+    
+
+     &__title {
+          @include min(568) {
+               font-size: size(24);
+               margin-bottom: size(24);
+               color: red;
+          }
+
+          @include min(992) {
+               font-size: size(60);
+               margin-bottom: size(28);
+          }
+
+          font-size: size(18);
+          margin-bottom: size(16);
+     }
+
+     &__description {
+
+          @include min(992) {
+               max-width: 80%;
+               font-size: size(16);
+               line-height: 1.8;
+          }
+
+          font-size: size(16);
+          margin: 0 auto;
+     }
+
+     .row {
+          --mf-gutter-y: 24px;
+     }
+
+     .main-appointment {
+         
+
+          @include max(991.98){
+               padding: 10px 0;
+          }
+          
+     }
+
+
+   //pills
+
+   .nav-pills {
+    background-color: transparent;
+    padding: 10px;
+    border-left: 1px solid #000;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    // Mobile: make tabs horizontal and scrollable
+    @include max(991.98) {
+      display: flex;
+      flex-direction: row !important;
+      gap: size(12);
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      border-left: 0;
+      border-bottom: 1px solid #000;
+      border-bottom: 0 !important;
+      padding: size(8) 0;
+      width: 100%;
+    }
+   }
+
+   .nav-link {
+    background-color: transparent;
+    padding: 10px;
+
+    @include min(992) {
+     padding: 14px 10px;
+     padding-left: 23px;
+     text-align: start !important;
+     font-size: size(15) !important;
+    }
+    border-radius: 0;
+    
+    // Mobile: inline items for horizontal scroll
+    @include max(991.98) {
+      flex: 0 0 auto;
+      padding: size(10) size(14);
+      text-align: center !important;
+    }
+     // &:hover {
+     //      background-color: #fff;
+     // }
+     &.active {
+          background-color: transparent;
+          color: #000000;
+          border-left: 2px solid #000;
+          font-weight: 600;
+          
+          // Mobile: underline active tab
+          @include max(991.98) {
+            border-left: 0;
+            border-bottom: 2px solid #000;
+            font-weight: 700;
+          }
+     }
+   }
+
+ .img-wrapper{
+     figure{
+          @include aspectRatio(542, 404);
+          img{
+               object-fit: cover;
+          }
+        
+     }
+ }
+
+ // Feature Badges Section
+ .feature-badges {
+     margin: size(18) 0;
+     
+     &__container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: size(12);
+          justify-content: flex-start;
+          align-items: center;
+          
+          @include max(768) {
+               gap: size(12);
+          }
+     }
+     
+     &__badge {
+          background-color: #FEF9F2;
+          border: 1px solid #D5BCBC;
+          color: $black;
+          padding: size(9) size(24);
+          border-radius: 50px;
+          font-size: size(14);
+          font-weight: $font-medium;
+          text-align: center;
+          transition: all 0.3s ease;
+          border: 1px solid transparent;
+          white-space: nowrap;
+          cursor: default;
+          user-select: none;
+          
+          @include min(768) {
+               padding: size(10) size(28);
+               font-size: size(14);
+          }
+          
+          @include min(992) {
+               padding: size(10) size(18);
+               font-size: size(14);
+          }
+          
+     }
+     
+     // Responsive layout adjustments
+     @include max(768) {
+          .feature-badges__container {
+               flex-direction: column;
+               align-items: center;
+               
+               .feature-badges__badge {
+                    width: 100%;
+                    max-width: 280px;
+               }
+          }
+     }
+     
+     @include min(769) {
+          .feature-badges__container {
+               // First row: 3 badges
+               .feature-badges__badge:nth-child(1),
+               .feature-badges__badge:nth-child(2),
+               .feature-badges__badge:nth-child(3) {
+                    flex: 0 0 auto;
+               }
+               
+               // Second row: 2 badges (centered)
+               .feature-badges__badge:nth-child(4),
+               .feature-badges__badge:nth-child(5) {
+                    flex: 0 0 auto;
+               }
+          }
+     }
+     
+     // Special styling for the second row to center them
+     &__badge:nth-child(4) {
+          @include min(769) {
+               margin-left: auto;
+               margin-right: size(16);
+          }
+     }
+     
+     &__badge:nth-child(5) {
+          @include min(769) {
+               margin-right: auto;
+               margin-left: size(16);
+          }
+     }
+}
+
+// Services Accordion Styles
+.services-accordion {
+     .accordion-item {
+          border: none;
+          border-bottom: 1px solid #E5E5E5;
+          margin-bottom: 0;
+          
+          &:last-child {
+               border-bottom: none;
+          }
+     }
+     
+     .accordion-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: size(20) 0;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background: transparent;
+          border: none;
+          
+          &:hover {
+               background-color: rgba(0, 0, 0, 0.02);
+          }
+          
+          .service-title {
+               display: flex;
+               // flex-direction: column;
+               gap: size(4);
+               
+               h4 {
+                    font-size: size(16);
+                    font-weight: 600;
+                    color: $black;
+                    margin: 0;
+                    line-height: 1.4;
+                    
+                    @include min(768) {
+                         font-size: size(18);
+                    }
+               }
+               
+               .price {
+                    font-size: size(14);
+                    font-weight: 500;
+                    color: $black;
+                    
+                    @include min(768) {
+                         font-size: size(16);
+                    }
+               }
+          }
+          
+          .accordion-icon {
+               font-size: size(14);
+               color: $black;
+               transition: transform 0.3s ease;
+               transform: rotate(0deg);
+               
+               @include min(768) {
+                    font-size: size(16);
+               }
+          }
+          
+          &[aria-expanded="true"] {
+               .accordion-icon {
+                    transform: rotate(180deg);
+               }
+          }
+     }
+     
+     .accordion-collapse {
+          border: none;
+          
+          &.show {
+               .accordion-body {
+                    padding-top: 0;
+               }
+          }
+     }
+     
+     .accordion-body {
+          padding: 0 0 size(20) 0;
+          background: transparent;
+          border: none;
+          
+          .service-details {
+               list-style: none;
+               padding: 0;
+               margin: 0;
+               
+               li {
+                    position: relative;
+                    padding-left: size(20);
+                    margin-bottom: size(8);
+                    font-size: size(14);
+                    color: #666;
+                    line-height: 1.5;
+                    
+                    @include min(768) {
+                         font-size: size(15);
+                    }
+                    
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+                    
+                    &::before {
+                         content: "•";
+                         position: absolute;
+                         left: 0;
+                         top: 0;
+                         color: $black;
+                         font-weight: bold;
+                    }
+               }
+          }
+     }
+     
+     // Responsive adjustments
+     @include max(767.98) {
+          .accordion-header {
+               padding: size(16) 0;
+               
+               .service-title {
+                    h4 {
+                         font-size: size(15);
+                    }
+                    
+                    .price {
+                         font-size: size(13);
+                    }
+               }
+               
+               .accordion-icon {
+                    font-size: size(12);
+               }
+          }
+          
+          .accordion-body {
+               .service-details {
+                    li {
+                         font-size: size(13);
+                         padding-left: size(16);
+                    }
+               }
+          }
+     }
+}
+}

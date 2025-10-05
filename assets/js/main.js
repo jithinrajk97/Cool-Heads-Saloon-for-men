@@ -247,6 +247,40 @@ function showSearchMessage(message) {
   }, 3000);
 }
 
+// Services Accordion functionality
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize accordion functionality
+  const accordionHeaders = document.querySelectorAll('.services-accordion .accordion-header');
+  
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-bs-target');
+      const targetElement = document.querySelector(targetId);
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      const icon = this.querySelector('.accordion-icon');
+      
+      // Toggle aria-expanded
+      this.setAttribute('aria-expanded', !isExpanded);
+      
+      // Toggle icon rotation using CSS transform
+      if (icon) {
+        if (isExpanded) {
+          // Collapsing - rotate back to 0 degrees
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          // Expanding - rotate to 180 degrees (pointing down)
+          icon.style.transform = 'rotate(180deg)';
+        }
+      }
+      
+      // Toggle collapse class
+      if (targetElement) {
+        targetElement.classList.toggle('show');
+      }
+    });
+  });
+});
+
 // Initialize header state
 document.addEventListener("DOMContentLoaded", () => {
   // Add any initialization code here

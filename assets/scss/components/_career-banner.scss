@@ -1,0 +1,202 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.career-banner {
+
+     position: relative;
+
+     @include min(568) {
+          padding: size(48) 0;
+     }
+
+     @include min(992) {
+          padding: size(80) 0 size(80) 0;
+     }
+
+     padding: size(40) 0 size(25) 0;
+
+     &__line {
+          @include min(992) {
+               margin-top: size(30);
+          }
+         .line-img{
+          max-width: 70%;
+          margin-top: size(18);
+         }
+     }
+
+     &__title {
+          @include min(568) {
+               font-size: size(24);
+               margin-bottom: size(24);
+          }
+
+          @include min(992) {
+               font-size: size(60);
+               margin-bottom: size(28);
+          }
+
+          font-size: size(18);
+          margin-bottom: size(16);
+     }
+
+     &__description {
+
+          @include min(992) {
+               max-width: 80%;
+               font-size: size(16);
+               line-height: 1.8;
+          }
+
+          font-size: size(16);
+          margin: 0 auto;
+     }
+
+     .row {
+          --mf-gutter-y: 16px;
+          @include min(992){
+            --mf-gutter-y: 30px;
+          }
+     }
+
+ 
+  
+}
+.cover1{
+  @include aspectRatio(362, 362);
+
+  @include min(992){
+    @include aspectRatio(362, 640);
+  }
+  border-radius: 6px;
+  overflow: hidden;
+  img{
+    object-fit: cover;
+  }
+}
+
+  .cover2{
+    @include aspectRatio(764, 310);
+    border-radius: 6px;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+    }
+  }
+
+    .cover3{
+      @include aspectRatio(372, 310);
+      border-radius: 6px;
+      overflow: hidden;
+      img{
+        object-fit: cover;
+    }
+    }
+
+  
+
+
+
+  
+
+    // See More Button Overlay
+    .see-more-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        pointer-events: none; // Allow clicks to pass through to button only
+        
+        @include max(768) {
+            top: 50%;
+        }
+    }
+
+    .btn-white {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        border-radius: 50px;
+        padding: size(12) size(32);
+        font-size: size(16);
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        position: relative;
+        pointer-events: auto; // Enable clicks on the button
+        
+        // Gradient drop shadow effect
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+            border-radius: 50px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.8;
+        }
+        
+        // Additional shadow layers for depth
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            border-radius: 50px;
+            z-index: -1;
+            filter: blur(4px);
+        }
+        
+        @include min(768) {
+            padding: size(14) size(20);
+            font-size: size(16);
+        }
+        
+        @include min(992) {
+            padding: size(16) size(40);
+            font-size: size(16);
+        }
+        
+        // Hover effects
+        @include noTouchDevices {
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+                
+                &::before {
+                    filter: blur(12px);
+                    opacity: 1;
+                }
+            }
+        }
+        
+        // Active state
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .middle-row{
+      height: 100%;
+      .col-12{
+        gap: 16px;
+        @include min(992){
+          gap: 0px;
+        }
+      }
+    }
+
+    .middle-col{
+      gap: 16px;
+    }

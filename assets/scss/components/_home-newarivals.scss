@@ -20,6 +20,27 @@
 		@include min(992) {
 			padding: size(45) 0;
 		}
+		
+		// Modifier classes for different background colors
+		&--primary {
+			background-color: #FEF9F2;
+		}
+		
+		&--secondary {
+			background-color: #F8F9FA;
+		}
+		
+		&--accent {
+			background-color: #E3F2FD;
+		}
+		
+		&--light {
+			background-color: #FFFFFF;
+		}
+		
+		&--dark {
+			background-color: #F5F5F5;
+		}
 	}
 
   
