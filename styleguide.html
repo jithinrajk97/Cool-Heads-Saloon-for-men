@@ -21,19 +21,437 @@
     <link rel="stylesheet" href="assets/css/components/header.css" />
     <link rel="stylesheet" href="assets/css/components/footer.css" />
 
-    <title>Moz Fashion | Home</title>
+    <title>Moz Fashion | Style guide</title>
+    
+    <style>
+      /* Enhanced Table Styling */
+      .styleguide .table-responsive {
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background: white;
+      }
+      
+      .styleguide .table {
+        margin-bottom: 0;
+        border: none;
+      }
+      
+      .styleguide .table thead th {
+        background: #000;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        border: none;
+        padding: 1.2rem 1rem;
+        position: relative;
+        text-align: center;
+      }
+      
+      .styleguide .table thead th:first-child {
+        border-top-left-radius: 12px;
+      }
+      
+      .styleguide .table thead th:last-child {
+        border-top-right-radius: 12px;
+      }
+      
+      .styleguide .table tbody tr {
+        transition: all 0.3s ease;
+        border: none;
+      }
+      
+      .styleguide .table tbody tr:hover {
+        background: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+      
+      .styleguide .table tbody td {
+        padding: 1.2rem 1rem;
+        border: none;
+        vertical-align: middle;
+        border-bottom: 1px solid #f1f3f4;
+        text-align: center;
+      }
+      
+      .styleguide .table tbody th {
+        background: #000;
+        color: white;
+        font-weight: 600;
+        border: none;
+        padding: 1.2rem 1rem;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        min-width: 50px;
+      }
+      
+      .styleguide .table tbody tr:last-child td {
+        border-bottom: none;
+      }
+      
+      .styleguide .btn-sm {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .styleguide .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+      }
+      
+      .styleguide .btn-primary:hover {
+        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      }
+      
+      .styleguide .btn-secondary {
+        /* background: linear-gradient(135deg, #6c757d 0%, #495057 100%); */
+        border: none;
+      }
+      
+      .styleguide .btn-secondary:hover {
+        /* background: linear-gradient(135deg, #5a6268 0%, #3d4449 100%); */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+      }
+      
+      /* Page name styling */
+      .styleguide .table tbody td:nth-child(2) {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.05rem;
+      }
+      
+      /* File name styling */
+      .styleguide .table tbody td:nth-child(3) {
+        background: #f8f9fa;
+        color: #000000;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        padding: 0.5rem 0.8rem;
+        /* display: inline-block; */
+        margin: 0.2rem auto;
+        text-align: center;
+      }
+      
+      /* Description styling */
+      .styleguide .table tbody td:nth-child(4) {
+        color: #6c757d;
+        line-height: 1.5;
+        font-size: 0.95rem;
+      }
+      
+      /* TOC header styling */
+      .styleguide h1 {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 2rem !important;
+      }
+      
+      /* Footer info styling */
+      .styleguide .text-muted {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+        font-weight: 500;
+        color: #495057 !important;
+      }
+      
+      /* Animation for table rows */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .styleguide .table tbody tr {
+        animation: fadeInUp 0.6s ease forwards;
+      }
+      
+      .styleguide .table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+      .styleguide .table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+      .styleguide .table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+      .styleguide .table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+      .styleguide .table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+      .styleguide .table tbody tr:nth-child(6) { animation-delay: 0.6s; }
+      .styleguide .table tbody tr:nth-child(7) { animation-delay: 0.7s; }
+      .styleguide .table tbody tr:nth-child(8) { animation-delay: 0.8s; }
+    </style>
   </head>
 
   <body>
     <!-- HEADER BEGIN -->
-    <header class="main-header"></header>
-    <!-- HEADER END -->
+  <header class="main-header" id="main-head">
+    <div class="main-header__top">
+      <div class="container d-flex justify-content-between align-items-center">
 
+        <div class="main-header__topRight d-flex align-items-center">
+          <select id="language-select" class="language-select">
+            <option value="english" data-image="assets/icons/english-flag.png">
+              English
+            </option>
+            <option value="hindi" data-image="assets/icons/english-flag.png">
+              Hindi
+            </option>
+
+          </select>
+        </div>
+
+        <div class="main-header__topLeft text-color fs-18 fw-medium d-md-block d-none">
+          Get <b><i class="fs-18">50%</i></b> Off On Haircuts!
+        </div>
+
+
+        <div class="text-color fs-16">
+          <!-- Login -->
+          <a href="#" class="login-link d-flex align-items-center gap-3 lh-1 text-white fs-16 pe-lg-0">
+            <i class="fas fa-user"></i>
+            <span class="fs-16 d-none d-sm-inline">Login</span>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="main-header__middle">
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <div class="logo-section d-flex align-items-center gap-5">
+          <div class="d-flex align-items-center gap-3">
+            <div class="hamburger d-lg-none" aria-label="Toggle mobile menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a href="index.html">
+              <figure class="main-header__logo mb-0">
+                <img src="assets/images/logo_new.svg" alt="cool-salon-logo" />
+              </figure>
+            </a>
+           
+          </div>
+
+          <!-- Main Navigation Menu -->
+          <nav class="main-header__nav nav-section d-lg-block d-none" aria-label="Main navigation">
+            <ul class="nav-menu d-flex align-items-center gap-3 mb-0">
+              <li><a href="#" class="nav-link">Home</a></li>
+              <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+              <li class="dropdown">
+                <a href="services.html" class="nav-link d-flex align-items-center gap-1">
+                  Services
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="/styles.html" class="nav-link d-flex align-items-center gap-1">
+                  Style
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="nav-link d-flex align-items-center gap-1">
+                  Team
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+              <!-- <li><a href="#" class="nav-link">Contact Us</a></li> -->
+            </ul>
+          </nav>
+        </div>
+
+
+        <!-- Right Side Actions -->
+        <div class="main-header__actions actions-section d-flex align-items-center gap-4">
+          <!-- Location Selector -->
+          <div class="location-selector">
+            <button class="location-btn d-flex align-items-center gap-2" aria-label="Select location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="d-sm-inline">California...</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <!-- Search Icon -->
+          <a href="#" class="search-icon" aria-label="Search" id="searchToggle">
+            <i class="fas fa-search"></i>
+          </a>
+
+          <!-- Search Bar Overlay -->
+          <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+              <div class="search-header">
+                <h3>Search Products & Services</h3>
+                <button class="search-close" id="searchClose" aria-label="Close search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="search-input-wrapper">
+                <div class="search-input-container">
+                  <i class="fas fa-search search-input-icon"></i>
+                  <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="Search for haircuts, styling, products..."
+                    autocomplete="off"
+                  >
+                  <button class="search-submit" type="button" aria-label="Search">
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="search-suggestions">
+                <div class="suggestion-category">
+                  <h4>Popular Searches</h4>
+                  <div class="suggestion-tags">
+                    <span class="suggestion-tag">Haircut</span>
+                    <span class="suggestion-tag">Beard Trim</span>
+                    <span class="suggestion-tag">Hair Styling</span>
+                    <span class="suggestion-tag">Facial</span>
+                  </div>
+                </div>
+                <div class="suggestion-category">
+                  <h4>Services</h4>
+                  <div class="suggestion-tags">
+                    <span class="suggestion-tag">Hair Coloring</span>
+                    <span class="suggestion-tag">Hair Treatment</span>
+                    <span class="suggestion-tag">Shampoo & Cut</span>
+                    <span class="suggestion-tag">Kids Haircut</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Make Appointment Button -->
+          <a href="#" class="appointment-btn d-lg-block d-none">
+            <span class="d-none d-sm-inline">Make an Appointment</span>
+            <i class="fas fa-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav class="main-header__bottom d-lg-none mobile-menu" aria-label="Mobile navigation">
+        <div class="container">
+          <ul class="mobile-nav">
+            <li><a href="#" class="no-decoration">Home</a></li>
+            <li><a href="#" class="no-decoration">About Us</a></li>
+            <li><a href="#" class="no-decoration">Services</a></li>
+            <li><a href="#" class="no-decoration">Style</a></li>
+            <li><a href="#" class="no-decoration">Team</a></li>
+            <li><a href="#" class="no-decoration">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- HEADER END -->
     <!-- STYLEGUIDE PAGE BEGIN -->
-    <main class="styleguide">
+    <main class="styleguide pt-4">
       <div class="container">
         
-
+        <!-- TABLE OF CONTENTS -->
+        <div class="mb-5">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Page Name</th>
+                  <th scope="col">File Name</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Home Page</td>
+                  <td>index.html</td>
+                  <td>Main landing page with hero banner, services, and company overview</td>
+                  <td><a href="index.html" class="btn btn-primary btn-sm">View Page</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>About Us</td>
+                  <td>aboutus.html</td>
+                  <td>Company information, mission, vision, and team details</td>
+                  <td><a href="aboutus.html" class="btn btn-primary btn-sm">View Page</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Services</td>
+                  <td>services.html</td>
+                  <td>Available salon services and treatments offered</td>
+                  <td><a href="services.html" class="btn btn-primary btn-sm">View Page</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>New Services</td>
+                  <td>new-services.html</td>
+                  <td>Latest and new service offerings and special treatments</td>
+                  <td><a href="new-services.html" class="btn btn-primary btn-sm">View Page</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Appointments</td>
+                  <td>appointments.html</td>
+                  <td>Book appointments, schedule services, and manage bookings</td>
+                  <td><a href="appointments.html" class="btn btn-primary btn-sm">View Page</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Career</td>
+                  <td>career.html</td>
+                  <td>Job opportunities, career information, and employment details</td>
+                  <td><a href="career.html" class="btn btn-primary btn-sm">View Page</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Styleguide</td>
+                  <td>styleguide.html</td>
+                  <td>Design system, components, and style documentation</td>
+                  <td><a href="styleguide.html" class="btn btn-secondary btn-sm">Current Page</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Styles</td>
+                  <td>styles.html</td>
+                  <td>CSS styles documentation and reference</td>
+                  <td><a href="styles.html" class="btn btn-primary btn-sm">View Page</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-3">
+            <small class="text-muted">Total Pages: 8 | Last Updated: <span id="currentDate"></span></small>
+          </div>
+        </div>
         
         <div class="mb-5">
           <h1 class="mb-4">Buttons</h1>
@@ -143,5 +561,14 @@
     <script src="assets/js/vendors/bootstrap-bundle.min.js"></script>
     <script src="assets/js/vendors/swiper-bundle.min.js"></script>
     <script src="assets/js/main.min.js"></script>
+    <script>
+      // Display current date in the TOC
+      document.addEventListener('DOMContentLoaded', function() {
+        const currentDateElement = document.getElementById('currentDate');
+        if (currentDateElement) {
+          currentDateElement.textContent = new Date().toLocaleDateString();
+        }
+      });
+    </script>
   </body>
 </html>
